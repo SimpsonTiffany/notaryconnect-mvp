@@ -1,16 +1,183 @@
 # React + Vite
+ NotaryConnect MVP
+ Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NotaryConnect is a React Single Page Application (SPA) that allows users to request mobile notary services and track appointment details in one place.
 
-Currently, two official plugins are available:
+This MVP demonstrates core frontend development skills including:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Component-based architecture
 
-## React Compiler
+React Router multi-view navigation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Dynamic routing
 
-## Expanding the ESLint configuration
+Local and global state management using React Context API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+External REST API integration
+
+Basic unit testing with Vitest
+
+Production deployment on Vercel
+
+ Problem This Application Solves
+
+Individuals often struggle to find and organize mobile notary services. Communication happens through phone calls or text messages with no centralized tracking system.
+
+NotaryConnect provides:
+
+A structured request form
+
+Appointment tracking
+
+Status updates (Pending, Confirmed, Cancelled)
+
+Address autocomplete via public API
+
+A centralized dashboard view
+
+ Technologies Used
+
+React (Vite)
+
+React Router DOM
+
+React Context API
+
+OpenStreetMap Nominatim API (address autocomplete)
+
+Vitest
+
+React Testing Library
+
+Vercel (Deployment)
+
+Git / GitHub
+
+ Application Features (MVP Scope)
+1️ Multi-View Navigation
+
+Home
+
+Request Form
+
+Request Detail (dynamic route: /requests/:id)
+
+Dashboard
+
+404 Not Found route
+
+2️ Dynamic Routing
+
+Each request generates a unique route:
+
+/requests/<generated-id>
+
+3️ State Management
+
+Local state for form inputs and UI interactions
+
+Global state (Context API) for managing all notary requests
+
+Requests are stored in memory for MVP purposes.
+
+4️ External API Integration
+
+The application integrates with:
+
+OpenStreetMap Nominatim API
+
+Used for:
+
+Address autocomplete suggestions
+
+Latitude and longitude retrieval
+
+No API key required.
+
+5️ Responsive Design
+
+The application follows a mobile-first layout and adapts across:
+
+Desktop
+
+Tablet
+
+Mobile
+
+6️ Basic Testing
+
+Basic unit tests were implemented using:
+
+Vitest
+
+React Testing Library
+
+Tests verify:
+
+Header navigation rendering
+
+Request form rendering and required fields
+
+ Running the Project Locally
+
+Clone the repository:
+
+git clone https://github.com/SimpsonTiffany/notaryconnect-mvp.git
+cd notaryconnect-mvp
+
+Install dependencies:
+
+npm install
+
+Run development server:
+
+npm run dev
+
+Run tests:
+
+npm test
+
+Build for production:
+
+npm run build
+ Live Deployment
+
+Vercel Deployment:
+
+ https://notaryconnect-mvp.vercel.app
+
+ Vercel SPA Routing Configuration
+
+A vercel.json file was added to support React Router dynamic routes:
+
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
+
+This prevents 404 errors on refresh for dynamic routes.
+
+ Future Enhancements (Final Project Phase)
+
+Planned expansions beyond MVP:
+
+User authentication & role-based access
+
+Persistent database (backend integration)
+
+Real-time request updates
+
+Payment processing
+
+Admin dashboard
+
+Map visualization using lat/lon coordinates
+
+Full-stack expansion using Node.js / Express
+
+ Author
+
+Tiffany Simpson
+Frontend Developer | Business Analyst | Computer Science Student
