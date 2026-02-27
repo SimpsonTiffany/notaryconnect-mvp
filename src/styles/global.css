@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+main {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+input,
+select,
+button {
+    font: inherit;
+}
+
+button {
+    padding: 10px 12px;
+    cursor: pointer;
+}
