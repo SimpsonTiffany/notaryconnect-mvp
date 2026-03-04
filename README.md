@@ -1,16 +1,19 @@
-# React + Vite
+- CSS
+- Vercel Deployment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Improvements Based on Instructor Feedback
 
-Currently, two official plugins are available:
+Based on feedback from the MVP submission, the following improvements were implemented:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive design enhancements using additional CSS media queries to improve usability across different screen sizes.
+- Added robust error handling to the request submission flow using try/catch blocks to prevent application crashes and improve user feedback.
 
-## React Compiler
+## Future Improvements
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Future versions of NotaryConnect may include:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- User authentication
+- Backend integration using Node.js and Express
+- Database storage with PostgreSQL
+- Appointment notifications and reminders
+- Payment processing integration
